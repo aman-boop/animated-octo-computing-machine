@@ -1,0 +1,71 @@
+:root {
+  --primary-color: #FFFFFF;
+}
+
+#preview {
+  transition-property: opacity;
+  transition-duration: 1s;
+}
+
+.initial-state {
+  opacity: 0.0;
+}
+
+.target-state {
+  opacity: 1.0;
+}
+
+body {
+  background-image: url(3.jpeg);
+}
+
+.container {
+  margin-top: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  transition: backdrop-filter 1s linear;
+  box-shadow: 1px 1px 4px 1px var(--primary-color);
+  border-radius: 10px;
+}
+
+.con1 {
+  padding: 15px;
+  margin: 15px;
+  text-align: center;
+  width: 50px;
+  font-size: 20px;
+  color: var(--primary-color);
+  box-shadow: 1px 1px 4px 1px var(--primary-color);
+  border-radius: 50px;
+  transition: background-color , box-shadow, 1ms;
+}
+
+.con1:active {
+  background-color: var(--primary-color);
+  box-shadow: 1px 1px 9px 6px var(--primary-color);
+}
+
+.container:hover {
+  backdrop-filter: blur(15px);
+}
+
+#screen {
+  width: initial;
+  flex-grow: 1;
+  box-shadow: initial;
+  background-color: transparent !important;
+}
+
+#rscreen, #preview{
+  text-align: right;
+  font-size: 20px;
+  outline: none;
+  color: var(--primary-color);
+  border: none;
+  background-color: transparent !important;
+}
+
+#preview {
+  color: rgba(255, 255, 255, 0.5);
+}
